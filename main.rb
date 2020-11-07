@@ -31,7 +31,7 @@ configure :development, :test do
 end
 
 configure :production do
-	DataMapper.setup(:default, ENV['DATABASE_URL'] || 'postgres://localhost/gamblingSite.db')
+	DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 get '/' do

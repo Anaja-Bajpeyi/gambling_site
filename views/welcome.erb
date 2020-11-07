@@ -1,0 +1,48 @@
+
+<html>
+<body>
+<form action="/bet" method="post">
+<p> Place Your Bet on Dice Number(1-6) </p>
+  <div class="boxbet">
+    <label for="money"><b>Bet Money</b></label>
+    <input type="text" placeholder="Enter Money" name="stake" required><br><br>
+
+    <label for="psw"><b>On</b></label><br>
+    <input type="text" placeholder="Dice Number" name="number" required><br><br>
+
+    <button type="submit">Bet</button><br><br>
+    
+  </div> 
+</form>
+
+
+<div class="boxtotal">
+  
+    <label for="cwin"><b>Current Win</b></label>
+    <input type="text"   value= "<%= session[:win] %>" ><br><br>
+
+    <label for="closs"><b>Current Loss</b></label>
+    <input type="text"  value= "<%= session[:lost] %>" ><br><br>
+	
+	<label for="cprofit"><b>Current Profit</b></label>
+    <input type="text"  value= "<%= session[:win] - session[:lost]%>" ><br><br>
+    
+  </div>
+
+
+<p> Account Information</p>
+<div class="boxacc">
+  
+    <label for="win"><b>Total Win</b></label>
+    <input type="text"  value ="<%= session[:total_win]%>" >
+
+    <label for="loss"><b>Total Loss</b></label>
+    <input type="text" value ="<%= session[:total_lost]%>"  >
+	
+	<label for="profit"><b>Total Profit</b></label>
+    <input type="text" value ="<%= session[:total_win] - session[:total_lost]%>" >
+     
+  </div>
+<button><a href="/logout"> log out</a></button>
+</body>
+</html>

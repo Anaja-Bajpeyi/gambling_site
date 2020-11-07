@@ -31,7 +31,7 @@ configure :development, :test do
 end
 
 configure :production do
-	DataMapper.setup(:default, ENV['DATABASE_URL']||"sqlite3://#{Dir.pwd}/gamblingSite.db")
+	DataMapper.setup(:default, ENV['DATABASE_URL'])
 end
 
 get '/' do

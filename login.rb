@@ -59,6 +59,7 @@ post '/login' do
         session[:id]=id.User_id
         erb :welcome
     else
+	session[:message] = "Failed Login"
         erb :login
     end
 	

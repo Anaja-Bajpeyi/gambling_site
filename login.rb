@@ -42,7 +42,7 @@ get '/login' do
     if session[:user]
         erb :welcome
     else
-	session[:message] = "Failed Login..."
+	"Failed Login..."
         erb :login
     end
 end
@@ -60,7 +60,7 @@ post '/login' do
         session[:id]=id.User_id
         erb :welcome
     else
-	session[:message] = "Failed Login..."
+	"Failed Login..."
         erb :login
     end
 	
@@ -75,7 +75,7 @@ post '/bet' do
       erb :welcome
     else
        session[:lost] += stake
-        erb :welcome
+       erb :welcome
     end
 end
 

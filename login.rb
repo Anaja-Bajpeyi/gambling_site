@@ -42,7 +42,7 @@ get '/login' do
     if session[:user]
         erb :welcome
     else
-	"Failed Login..."
+	puts "Failed Login..."
         erb :login
     end
 end
@@ -60,7 +60,7 @@ post '/login' do
         session[:id]=id.User_id
         erb :welcome
     else
-	"Failed Login..."
+	puts "Failed Login..."
         erb :login
     end
 	
